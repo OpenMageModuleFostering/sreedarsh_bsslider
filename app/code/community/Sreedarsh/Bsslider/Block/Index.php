@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ */
+
 class Sreedarsh_Bsslider_Block_Index extends Mage_Core_Block_Template {
 
     public function getSlider()

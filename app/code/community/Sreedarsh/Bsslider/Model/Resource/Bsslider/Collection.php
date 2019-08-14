@@ -1,13 +1,12 @@
 <?php
 
 /**
- * Bridge Batchcode
+ * Sreedarsh Bsslider
  *
- * @category      Bridge
- * @package       Bridge_Batchcode
- * @copyright     Copyright (c) 2013 Bridge India. (http://bridge-india.in)
- * @license       http://bridge-india.in/disclaimer/magento
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
  */
+
 class Sreedarsh_Bsslider_Model_Resource_Bsslider_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract {
 
     public function _construct()

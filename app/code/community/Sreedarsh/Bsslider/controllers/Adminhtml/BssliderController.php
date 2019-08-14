@@ -1,8 +1,16 @@
 <?php
 
+/**
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ */
+
 class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Controller_Action {
 
-    protected function _initBsslider($idFieldName = 'id') {
+    protected function _initBsslider($idFieldName = 'id')
+    {
         $imageId = (int) $this->getRequest()
                         ->getParam($idFieldName);
         if ($imageId) {
@@ -14,7 +22,7 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
 
         return $this;
     }
-    
+
     public function indexAction()
     {
         $this->_title($this->__('Bootstrap Slider'))->_title($this->__('Manage Slider'));
@@ -75,7 +83,7 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
     public function saveAction()
     {
         $post_data = $this->getRequest()->getPost();
-        
+
 
 
         if ($post_data) {
@@ -85,7 +93,7 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
                 try {
 
                     if ((bool) $post_data['image_name']['delete'] == 1) {
-
+                        unlink(Mage::getBaseDir('media') . DS . $post_data['image_name']['value']);
                         $post_data['image_name'] = '';
                     } else {
 
@@ -106,8 +114,9 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
 
                                 $path = Mage::getBaseDir('media') . DS . 'bsslider' . DS . 'slides' . DS;
                                 $uploader = new Varien_File_Uploader('image_name');
-                                $uploader->setAllowedExtensions(array('jpg', 'png', 'gif'));
                                 $uploader->setAllowRenameFiles(false);
+                                $uploader->setAllowedExtensions(array('jpg', 'png', 'gif'));
+
                                 $uploader->setFilesDispersion(false);
                                 $destFile = $path . $_FILES['image_name']['name'];
                                 $filename = $uploader->getNewFileName($destFile);
@@ -122,9 +131,6 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
                     $this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
                     return;
                 }
-
-
-
                 $model = Mage::getModel('bsslider/bsslider')
                         ->addData($post_data)
                         ->setId($this->getRequest()->getParam('id'))
@@ -149,13 +155,15 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
         $this->_redirect("*/*/");
     }
 
-    public function deleteAction() {
+    public function deleteAction()
+    {
         $this->_initBsslider();
-        $bsslider = Mage::registry('current_bsslider');
+        $bsslider = Mage::registry('current_bsslider');       
 
         if ($bsslider->getId()) {
-            try {
+            try {               
                 $bsslider->delete();
+                unlink(Mage::getBaseDir('media') . DS . $bsslider->getImageName());
                 Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('bsslider')->__('The slider image has been deleted.'));
             } catch (Exception $e) {
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
@@ -163,7 +171,7 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
         }
         $this->_redirect('*/*/index');
     }
-    
+
     public function massDeleteAction()
     {
         $Ids = $this->getRequest()->getParam('bsslider');
@@ -178,6 +186,8 @@ class Sreedarsh_Bsslider_Adminhtml_BssliderController extends Mage_Adminhtml_Con
                             ->reset()
                             ->load($Id)
                             ->delete();
+
+                    unlink(Mage::getBaseDir('media') . DS . $bsslider->load($Id)->getImageName());
                 }
                 Mage::getSingleton('adminhtml/session')->addSuccess(
                         Mage::helper('bsslider')->__('Total of %d record(s) were deleted.', count($Ids))

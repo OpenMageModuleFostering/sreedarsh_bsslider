@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ */
 
 class Sreedarsh_Bsslider_Model_Bsslider extends Mage_Core_Model_Abstract
 {

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ */
+
 class Sreedarsh_Bsslider_Block_Adminhtml_Bsslider_Grid extends Mage_Adminhtml_Block_Widget_Grid {
 
     public function __construct($arguments = array())

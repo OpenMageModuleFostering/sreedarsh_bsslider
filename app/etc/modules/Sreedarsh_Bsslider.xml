@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
+
 <!--
-* Bridge Batchcode
-*
-* @category      Bridge
-* @package       Bridge_Batchcode
-* @copyright     Copyright (c) 2013 Bridge India. (http://bridge-india.in)
-* @license       http://bridge-india.in/disclaimer/magento
--->
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ *
+ -->
+ 
 <config>
     <modules>
         <Sreedarsh_Bsslider>

@@ -1,13 +1,12 @@
 <?php
 
 /**
- * Bridge Batchcode
+ * Sreedarsh Bsslider
  *
- * @category      Bridge
- * @package       Bridge_Batchcode
- * @copyright     Copyright (c) 2013 Bridge India. (http://bridge-india.in)
- * @license       http://bridge-india.in/disclaimer/magento
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
  */
+
 class Sreedarsh_Bsslider_Block_Adminhtml_Edit extends Mage_Adminhtml_Block_Widget_Form_Container {
 
     public function __construct()

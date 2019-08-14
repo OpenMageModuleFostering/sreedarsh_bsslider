@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ */
+
 class Sreedarsh_Bsslider_Model_System_Dropdown_Values
 {
     public function toOptionArray()

@@ -1,16 +1,14 @@
 <?php
 
+/**
+ * Sreedarsh Bsslider
+ *
+ * @category      Sreedarsh
+ * @package       Sreedarsh_Bsslider
+ */
+
 class Sreedarsh_Bsslider_Block_Adminhtml_Bsslider_Edit_Form extends Mage_Adminhtml_Block_Widget_Form {
 
-    /**
-     * @var Batch code entity id
-     */
-    protected $_entityid;
-
-    /**
-     * Class constructor
-     *
-     */
     public function __construct()
     {
         parent::__construct();
@@ -19,7 +17,7 @@ class Sreedarsh_Bsslider_Block_Adminhtml_Bsslider_Edit_Form extends Mage_Adminht
     /**
      * Prepare form before rendering HTML
      *
-     * @return Bridge_Batchcode_Block_Adminhtml_Batchcode_Edit_Form
+     * @return Sreedarsh_Bsslider_Block_Adminhtml_Bsslider_Edit_Form
      */
     protected function _prepareForm()
     {
