@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+    <name>sreedarsh_bsslider</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Highly customizable front page slider built with bootstrap 3.3.5
+</summary>
+    <description>Features: &#xD;
+&#xD;
+* Fully dynamic and fully responsive on all mobile devices and screen size (ie mobile, tablets, desktop etc) &#xD;
+* All modern browsers supported.&#xD;
+*Javascript implemented in no conflict mode
+* Can accomodate any number of images&#xD;
+*  Easy to install and customize;
+* Adjustable controls via backend configuration&#xD;
+* No programming skills required&#xD;
+* Easy to install and configure</description>
+    <notes>Banner slider for magento</notes>
+    <authors><author><name>Sreedarsh</name><user>sreedarsh</user><email>sreedarsh88@gmail.com</email></author><author><name>Sreedarsh Ayyappan</name><user>sreedarsh</user><email>sreedarsh88@gmail.com</email></author></authors>
+    <date>2015-10-29</date>
+    <time>18:01:51</time>
+    <compatible/>
+    <dependencies><required><php><min>5.1.3</min><max>6.5.5</max></php></required></dependencies>
+</package>
