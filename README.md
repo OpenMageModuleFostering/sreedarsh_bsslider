@@ -1,28 +1,23 @@
-# Bootstrap slider/carousel for Magento by Sreedarsh
-Frontpage carousel built with bootstrap, for different versions of magento
-The extension is able to work with magento versions 1.7 to 1.9
+## Original Package Description
 
-Download the extension files as zip archive and then upload/unzip it to the root of your magento installation.
-
-The bootstrap slider extension supports any frontend theme.
-
-Any number images supported.
-Customizable controls and pointers
-Fully responsive and mobile friendly
-No programming knowledge needed
-
-*Installation description*
-
-After installing the extension and adding images,Just copy and paste the below blockcode to the cms page or static block:
-
-{{block type="bsslider/index" name="bsslider_index" template="bsslider/slider.phtml"}} 
-
-Thats all needed,Your carousel is ready !! 
-
-Magento v1.9.2.2 users,Please do the following steps
+Highly customizable front page slider built with bootstrap 3.3.5.
+    
 
 
-1. Goto System > Permissions > Blocks 
-2. Add new Block 
-   Block Name-bsslider/index 
-   Is Allowed-Yes 
+## Disclaimer
+
+This is a Repository imported from the Magento Marketplace, formerly known as Magento connect.
+The purpose is, to archive them in a permanent way, you can read more about it in our blogbost: https://openmage.github.io/2019/08/18/new-home-magento-connect-modules.html
+There is a chance, this repository misses some of the newer version.
+We rely on our users to inform us about newer Releases. And if they can provide them to us, this would be even better.
+
+### The original source is already on a public Git?
+
+Please also inform us about them, then we can mark our repository as discontinued and refer to the other Repository.
+
+### Contact us
+
+the easiest way is to create an Issue here, we have an eye on them.
+
+Alternative you can try to contact @Flyingmana directly.
+ 
